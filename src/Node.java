@@ -4,7 +4,7 @@ public class Node {
     Node prev;
     Node next;
 
-    Node(TitanicData data){
+    Node(TitanicData data) {
         this.data = data;
     }
 }

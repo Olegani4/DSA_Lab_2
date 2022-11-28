@@ -1,4 +1,4 @@
-public class Doubly{
+public class Doubly {
     private Node first;
     private Node last;
 
@@ -6,16 +6,16 @@ public class Doubly{
         first = new Node(data);
         last = first;
     }
+
     public Doubly() {
     }
 
     public void add(TitanicData data) {
         Node node = new Node(data);
         node.next = null;
-        if (first == null && last == null){
+        if (first == null && last == null) {
             first = node;
-        }
-        else {
+        } else {
             node.prev = last;
 
             if (last != null)
@@ -50,7 +50,7 @@ public class Doubly{
         else
             first = node.next;
 
-        if(node.next != null)
+        if (node.next != null)
             node.next.prev = node.prev;
         else
             last = node.prev;
@@ -75,12 +75,10 @@ public class Doubly{
         if (index == 0) {
             newNode.next = first;
             first = newNode;
-        }
-        else if (index == size()) {
+        } else if (index == size()) {
             newNode.prev = last;
             last = newNode;
-        }
-        else {
+        } else {
             Node node = first;
             for (long i = 0; i != index; i++)
                 node = node.next;
